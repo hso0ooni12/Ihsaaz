@@ -1,0 +1,30 @@
+name: FamilySurvey
+
+options:
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+
+targets:
+  FamilySurvey:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: App
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.github.fesurvey.wrapper
+        PRODUCT_NAME: FamilySurvey
+        INFOPLIST_FILE: App/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+    scheme:
+      gatherCoverageData: false
